@@ -22,6 +22,9 @@ color: blue;
     width: 120px;
     float: left;
   }
+  #img1.AboutP2 {
+    width: 300px;
+  }
   #img2 {
     margin-right: 25px;
  
@@ -33,4 +36,10 @@ color: blue;
     width: 400px;
     float: right;
     font-style: italic;
+}
+#AboutP2{
+  /* width: 120px; */
+  /* float: left;
+  padding-bottom: 15px;
+  margin-left: 0; */
 }
