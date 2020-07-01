@@ -10,4 +10,4 @@ document.getElementById('lat').textContent=latitude;
 document.getElementById('lon').textContent=longitude;
 }
 
-getData;
+getData();
