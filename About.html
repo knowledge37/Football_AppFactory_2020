@@ -59,15 +59,32 @@
         </div>
             </header> -->
             <section>
-           
-           <div id="img1" >
-            <img src="img/images (11).jpeg" />
-            <div id="AboutP2">
-                <h3 >Kaizer chiefs statistic</h3><br> <strong>
-            <p>Founded‎: ‎7 January 1970; 50 years ago<br>
-            Ground‎: ‎FNB Stadium<br>
-            League‎: ‎ABSA Premiership<br>
-            Manager‎: ‎Ernst Middendorp<br>
+                <div class="container " >
+                    <div id="p1" class="jumbotron"style="background-color: darkgray;"><p>
+                        
+                      <div id="img2">
+                          <img src="img/images (12).jpeg" /></div>
+                      Kaizer Motaung was born on<strong> 16 October 1944 in Orlando East, Soweto</strong>. Former soccer player and founder of the Kaizer Chiefs Football Club, Motaung is affectionately known by his nickname<strong> “Shintsha Guluva”</strong>.
+                    Kaizer Chiefs Football Club is a South African professional football club based in Naturena
+                    in Johannesburg that plays in the Premier Soccer League.
+                    <strong>The team is nicknamed Amakhosi which means "Lords" or "Chiefs" in Zulu,
+                    and the Phefeni Glamour Boys.Chiefs have won 4 league titles and over 50 club trophies.</strong>
+                    
+                    The team has a strong local rivalry with Orlando Pirates, a fellow Soweto team which Chiefs founder Kaizer Motaung played for in his early playing career.
+                        </p></div>
+                        <div id="img1" >
+                            <img src="img/images (11).jpeg" />
+                            <div id="AboutP2">
+                                <h3 >Kaizer chiefs statistic</h3><br> <strong>
+                            <p>Founded‎: ‎7 January 1970; 50 years ago<br>
+                            Ground‎: ‎FNB Stadium<br>
+                            League‎: ‎ABSA Premiership<br>
+                            Manager‎: ‎Ernst Middendorp<br>
+                        </p> 
+                        
+                      </div>
+
+                
           
           </p> </strong>
              <a href="https://www.kaizerchiefs.com/club/history/">   <p> Find out more about history.<p>
@@ -76,20 +93,7 @@
           </div></div>
             <article>
               
-            <div class="container " >
-          <div id="p1" class="jumbotron"style="background-color: darkgray;"><p>
-            <div id="img2">
-                <img src="img/images (12).jpeg" /></div>
-            Kaizer Motaung was born on<strong> 16 October 1944 in Orlando East, Soweto</strong>. Former soccer player and founder of the Kaizer Chiefs Football Club, Motaung is affectionately known by his nickname<strong> “Shintsha Guluva”</strong>.
-          Kaizer Chiefs Football Club is a South African professional football club based in Naturena
-          in Johannesburg that plays in the Premier Soccer League.
-          <strong>The team is nicknamed Amakhosi which means "Lords" or "Chiefs" in Zulu,
-          and the Phefeni Glamour Boys.Chiefs have won 4 league titles and over 50 club trophies.</strong>
-          
-          The team has a strong local rivalry with Orlando Pirates, a fellow Soweto team which Chiefs founder Kaizer Motaung played for in his early playing career.
-              </p></div>
-            </div>
-
+         
            </article>
               
         
@@ -103,74 +107,7 @@
  
     <script>
      // selector
-let player1 = document.querySelector('#player1');
 
-//storage
-let arrayPlayer=[];
-
-//default loader
-window.addEventListener('DOMContentLoaded',(e)=>{
-    getInfo();
-});
-
-// method for a request
-function getInfo(){
-    while (getInfo.hasChildNodes()) {
-        getInfo.removeChild(getInfo.lastChild)
-    }
-  const request = new XMLHttpRequest();
-   request.open("GET",'https://api.wheretheiss.at/v1/satellites');
-
-   request.onload = function(){
-    let ladumaNews = JSON.parse(request.responseText);
-    arrayPlayer = ladumaNews.arrayPlayer;
-   }
-    arrayPlayer = ladumaNews.arrayPlayer;
-    articles.forEach(article => {
-
-        let card = document.createElement('div');
-        card.classList.add('card'); 
-        card.style.width = '70%'; 
-        card.style.margin = '5% 0 0 0'
-        card.style.border = '1px solid #CFD8DC'
-        card.style.borderRadius = '5px';
-        let cardImage = document.createElement('img'); 
-        cardImage.classList.add('card-img-top'); 
-        cardImage.src = article.urlToImage;
-        cardImage.style.width = '100%';
-        card.appendChild(cardImage);
-        let cardBodyTitle = document.createElement('h6');
-        cardBodyTitle.classList.add('card-title'); 
-        cardBodyTitle.textContent = article.title;
-        cardBodyTitle.style.padding
-        let cardBodyText = document.createElement('h6');
-        cardBodyText.classList.add('card-text'); 
-        cardBodyText.textContent = article.content;
-        let cardBody = document.createElement('div');
-        cardBody.classList.add = "card-body";
-        cardBody.style.margin = '0.5em';
-        // cardBody.style.textAlign = 'center';
-        let button = document.createElement('a');
-        button.style.textAlign = 'center';
-        button.href = article.url;
-        button.style.position = 'absolute'; 
-        button.style.bottom = 0;
-        button.style.textDecoration = 'underline';
-        button.innerHTML = '<i class="fas fa-link"></i>'+'Read more';
-        cardBody.appendChild(cardBodyTitle);
-        cardBody.appendChild(cardBodyText);  
-        cardBody.appendChild(button);
-        card.appendChild(cardBody);
-        
-       healths.append(card);
-    });
-
-
-
-request.send(null);
-       
-}
-        
 
     </script>
 
